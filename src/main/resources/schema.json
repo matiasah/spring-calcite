@@ -1,0 +1,14 @@
+{
+    "version": "1.0",
+    "schemas": [
+        {
+            "name": "test",
+            "type": "custom",
+            "factory": "org.apache.calcite.adapter.java.ReflectiveSchema$Factory",
+            "operand": {
+                "class": "calcite.demo.schemas.EMPSchema",
+                "staticMethod": "getInstance"
+            }
+        }
+    ]
+}
