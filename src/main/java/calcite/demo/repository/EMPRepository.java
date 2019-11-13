@@ -7,11 +7,17 @@ package calcite.demo.repository;
 
 import calcite.demo.model.EMP;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author Matías
  */
 public interface EMPRepository extends CrudRepository<EMP, Integer> {
+    
+    @Transactional(propagation=Propagation.NOT_SUPPORTED)
+    @Override
+    public Iterable<EMP> findAll();
     
 }
