@@ -6,8 +6,6 @@
 package calcite.demo.schemas;
 
 import calcite.demo.dto.EMPDTO;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *

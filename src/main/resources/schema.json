@@ -9,6 +9,19 @@
                 "class": "calcite.demo.schemas.EMPSchema",
                 "staticMethod": "getInstance"
             }
+        },
+        {
+            "name": "test2",
+            "type": "custom",
+            "factory": "org.apache.calcite.adapter.file.FileSchemaFactory",
+            "operand": {
+                "tables": [
+                    {
+                        "name": "countries",
+                        "url": "https://restcountries.eu/rest/v2/all"
+                    }
+                ]
+            }
         }
     ]
 }
